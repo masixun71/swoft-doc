@@ -59,8 +59,8 @@ BeanFactory::getBean('name');
 BeanFactory::hasBean("name");
 ```
 
- - App/ApplicationContext/BeanFactory都可从容器中得到Bean
- - hasBean 某个bean是否存在
+- App/ApplicationContext/BeanFactory都可从容器中得到Bean
+- hasBean 某个bean是否存在
 
 
 ## 实例
@@ -132,9 +132,9 @@ class UserLogic
 
 ### 接口引用
 
- ```php
+```php
  /**
-  * @\Swoft\Bean\Annotation\Bean("boy")
+  * @\Swoft\Bean\Annotation\Bean(ref="boy")
   */
  interface UserInterface
  {
@@ -179,7 +179,7 @@ class UserLogic
          return $this->userData->getData();
      }
  }
- ```
+```
 
- - 接口上面指定了使用的实现bean别名
- - 接口使用处，无需指定使用那个别名，会根据接口上面的引用注入不同的实例bean
+- 接口上面指定了使用的实现bean别名
+- 接口使用处，无需指定使用那个别名，会根据接口上面的引用注入不同的实例bean
